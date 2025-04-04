@@ -1,0 +1,58 @@
+/* Admin-users-css-start */
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+/* Admin-users-css-end */
+
+
+/* Adminnav-css-start */
+.Adminnav {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+    margin: 0;
+}
+
+.Adminnav .adminnav-in img {
+    background: #f2f4f5;
+    width: 100%;
+    max-width: 140px;
+}
+
+.Adminnav .adminnav-in ul {
+    margin-top: 25px;
+}
+
+.Adminnav .adminnav-in ul li {
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 17px;
+}
+
+.admin-btn {
+    margin-top: 25px;
+}
+
+.admin-btn button {
+    padding: 5px 18px;
+    background-color: red;
+    border: none;
+    border-radius: 7px;
+}
+
+.admin-btn button a {
+    color: white;
+    font-size: 16px;
+}
+
+/* Adminnav-css-end */
