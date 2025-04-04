@@ -14,7 +14,7 @@ function Cart() {
 
 
   let cartitem = async () => {
-    await axios.get("http://localhost:8080/cartitem").then((r) => {
+    await axios.get("https://instabackend-nine.vercel.app/cartitem").then((r) => {
       if (r.data.status) {
         setcartdata(r.data.cartdata)
       }
@@ -42,7 +42,7 @@ function Cart() {
     
   
     // let updatecart=async()=>{
-    //   axios.post("http://localhost:8080/updatecart",{
+    //   axios.post("https://instabackend-nine.vercel.app/updatecart",{
     //     itemid,
     //     
     //   })
@@ -52,7 +52,7 @@ function Cart() {
     let increment = () => {
       setquantity(++quantity)
       let totalprice=quantity*product.price
-      axios.post("http://localhost:8080/updatecart", { itemid, quantity,totalprice })
+      axios.post("https://instabackend-nine.vercel.app/updatecart", { itemid, quantity,totalprice })
       window.location.reload()
     }
   
@@ -63,7 +63,7 @@ function Cart() {
       else {
         setquantity(--quantity)
         let totalprice=quantity*itmprice
-        axios.post("http://localhost:8080/updatecart", { itemid, quantity,totalprice })
+        axios.post("https://instabackend-nine.vercel.app/updatecart", { itemid, quantity,totalprice })
         window.location.reload()
       }
 
@@ -84,7 +84,7 @@ function Cart() {
     }
 
     let removecart = (item) => {
-      axios.post("http://localhost:8080/removeitem", { item })
+      axios.post("https://instabackend-nine.vercel.app/removeitem", { item })
       window.location.reload()
     }
 

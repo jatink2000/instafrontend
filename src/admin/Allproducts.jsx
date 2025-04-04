@@ -11,7 +11,7 @@ function Allproducts() {
     }, [])
 
     let apidata = () => {
-        axios.get("http://localhost:8080/products").then((res) => {
+        axios.get("https://instabackend-nine.vercel.app/products").then((res) => {
             setproduct(res.data.product)
         }).catch((err) => {
             console.log("product", err)
@@ -31,7 +31,7 @@ function Allproducts() {
     // removeproduct
 
    let removeproduct=(itemid)=>{
-    axios.post("http://localhost:8080/removeproduct",{itemid}).then((res)=>{
+    axios.post("https://instabackend-nine.vercel.app/removeproduct",{itemid}).then((res)=>{
         if(res.data.status){
             alert(res.data.msg)
             window.location.reload()

@@ -14,7 +14,7 @@ function Productdetails() {
     }
 
     let addcart = (product) => {
-        let alreadycart = axios.get("http://localhost:8080/cartitem")
+        let alreadycart = axios.get("https://instabackend-nine.vercel.app/cartitem")
         alreadycart.then((res) => {
             if (res.data.status) {
                 let cartdata = res.data.cartdata
@@ -25,7 +25,7 @@ function Productdetails() {
                     alert("already in cart")
                 }
                 else {
-                    let cart = axios.post("http://localhost:8080/cart", { product }).then((r) => {
+                    let cart = axios.post("https://instabackend-nine.vercel.app/cart", { product }).then((r) => {
                         if (r.data.status) {
                             Swal.fire({
                                 title: "Good job!",

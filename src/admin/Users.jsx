@@ -15,7 +15,7 @@ function Users() {
     }, [])
 
     let hp = () => {
-        axios.get("http://localhost:8080/alreadyuser").then((res) => {
+        axios.get("https://instabackend-nine.vercel.app/alreadyuser").then((res) => {
             if (res.data.status) {
                 setuser(res.data.signup)
             }

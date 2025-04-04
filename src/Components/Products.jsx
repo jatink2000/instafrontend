@@ -14,7 +14,7 @@ function Products() {
     let go = useNavigate()
 
     let productdata = async () => {
-        await axios.get("http://localhost:8080/products").then((r) => {
+        await axios.get("https://instabackend-nine.vercel.app/products").then((r) => {
             if (r.data.status) {
                 setapidata(r.data.product)
                 setfilterapi(r.data.product)

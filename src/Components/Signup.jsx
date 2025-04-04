@@ -25,7 +25,7 @@ function Signup() {
         setpassword(e.target.value)
     }
     let signup = () => {
-        let alreadyuser = axios.get("http://localhost:8080/alreadyuser")
+        let alreadyuser = axios.get("https://instabackend-nine.vercel.app/alreadyuser")
         alreadyuser.then((res) => {
             if (res.data.status) {
                 let users = res.data.signup
@@ -37,7 +37,7 @@ function Signup() {
                 }
 
                 else {
-                    let response = axios.post("http://localhost:8080/Signup", { email, password, firstname, lastname })
+                    let response = axios.post("https://instabackend-nine.vercel.app/Signup", { email, password, firstname, lastname })
                     response.then((res) => {
                         if (res.data.status) {
                             swal("signup success");

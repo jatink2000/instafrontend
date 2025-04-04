@@ -12,7 +12,7 @@ function Nav(props) {
     }, [])
 
     let totalcart = () => {
-        let cartitem = axios.get("http://localhost:8080/cartitem").then((res) => {
+        let cartitem = axios.get("https://instabackend-nine.vercel.app/cartitem").then((res) => {
             let cartdata = res.data.cartdata
             setcart(cartdata.length)
         })

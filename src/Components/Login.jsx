@@ -18,7 +18,7 @@ function Login() {
     }
 
     let login = () => {
-        let response = axios.post("http://localhost:8080/", { email, password })
+        let response = axios.post("https://instabackend-nine.vercel.app/", { email, password })
         response.then((res) => {
             if (res.data.status) {
                 Swal.fire({

@@ -40,7 +40,7 @@ function Addproduct() {
     }
 
     let productbtn = () => {
-        let response = axios.post("http://localhost:8080/addproduct", { title, price, image, rating, des, category , productid})
+        let response = axios.post("https://instabackend-nine.vercel.app/addproduct", { title, price, image, rating, des, category , productid})
         response.then((res) => {
             if (res.data.status) {
                 alert("add product success")
